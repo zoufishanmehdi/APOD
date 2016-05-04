@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oRJ-li-nuF">
+                                <rect key="frame" x="0.0" y="20" width="600" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="339" id="wbe-5i-6sn"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wbe-5i-6sn"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="wVs-NA-Lre">
+                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwU-1t-5hw">
+                                <rect key="frame" x="275" y="215" width="50" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KGn-oH-get"/>
+                                    <constraint firstAttribute="height" constant="70" id="Z2X-hd-NGB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="rocketSpaceship"/>
+                                <connections>
+                                    <action selector="sodButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3G-eG-YIe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wVs-NA-Lre" secondAttribute="bottom" id="CUx-a8-oep"/>
+                            <constraint firstItem="wVs-NA-Lre" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F1Q-Wd-bI9"/>
+                            <constraint firstItem="oRJ-li-nuF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hpk-Sq-2rd"/>
+                            <constraint firstItem="wVs-NA-Lre" firstAttribute="top" secondItem="dwU-1t-5hw" secondAttribute="bottom" constant="15" id="LyH-qM-jI6"/>
+                            <constraint firstAttribute="trailing" secondItem="wVs-NA-Lre" secondAttribute="trailing" id="dOP-Ci-MI3"/>
+                            <constraint firstItem="oRJ-li-nuF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="h2j-Ru-Pi1"/>
+                            <constraint firstItem="wVs-NA-Lre" firstAttribute="top" secondItem="oRJ-li-nuF" secondAttribute="bottom" id="oUD-dy-ZTP"/>
+                            <constraint firstAttribute="trailing" secondItem="oRJ-li-nuF" secondAttribute="trailing" id="rM2-h2-xyT"/>
+                            <constraint firstItem="oRJ-li-nuF" firstAttribute="centerX" secondItem="dwU-1t-5hw" secondAttribute="centerX" id="smR-xt-VFs"/>
+                            <constraint firstItem="oRJ-li-nuF" firstAttribute="width" secondItem="wVs-NA-Lre" secondAttribute="height" multiplier="2:1" id="zG1-Ew-nyj"/>
+                            <constraint firstItem="dwU-1t-5hw" firstAttribute="centerX" secondItem="oRJ-li-nuF" secondAttribute="centerX" id="zi0-1D-SCz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="podImageView" destination="oRJ-li-nuF" id="QYM-UA-hCK"/>
+                        <outlet property="podTextView" destination="wVs-NA-Lre" id="Osf-pq-SdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="321"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rocketSpaceship" width="800" height="800"/>
+    </resources>
+</document>
